@@ -392,6 +392,18 @@ $s = str_replace('я',
 , $s);
 
 
+$random = rand(1, 1);
+if($random === 1){
+    // $st = '🔥';
+    // $st2 = '🖤';
+}
+
+
+
+// $s = str_replace('✨', $st, $s);
+
+// $s = str_replace('❤', $st2, $s);
+
 
 
 ?>
