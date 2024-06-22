@@ -1,0 +1,180 @@
+.md{
+    display: flex;
+    justify-content: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+#mask{
+    position: absolute;
+    bottom: 0;
+    z-index: 9000;
+    background-color: #000;
+    display: none;
+}
+
+#boxes .window{
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    bottom: 0;
+    overflow: hidden;
+}  
+
+#boxes #dialog{
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    height: 100vh;
+    bottom: 0;
+    background-color: #fff;
+    display: none;
+    /* border-radius: 25px 25px 0 0; */
+}
+
+.box_container{
+    width: 85%;
+    padding: 20px 0 0 0;
+}
+
+.box_form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box_title h2{
+    color: #666;
+    font-weight: unset;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+.box_hr{
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    background: #ddd;
+}
+
+.box_content{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    width: 100%;
+    margin-top: 10px;
+    -webkit-overflow-scrolling: touch;
+    height: 80px;
+}
+
+.box_block{
+    flex: 0 0 auto;
+    width: 100px;
+    height: 65px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+
+    
+}
+
+
+.box_block img{
+    height: 35px;
+}
+
+.act{
+    display: flex;
+    position: absolute;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background: #ddd;
+    border-radius: 100%;
+    right: -5px;
+    bottom: -5px;
+    z-index: 9999;
+}
+
+.act_bt{
+    display: none;
+}
+
+input[type=radio]:checked + .box_block > .act > .act_bt{
+    display: flex;
+    background: #6aff77;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input[type=radio]:checked + .box_block > .act > .act_bt img{
+    height: 15px;
+
+}
+
+.sub_smile{
+    margin-top: 40px;
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(85deg,#9917FF, #D24EE8);
+    border: 0px solid #ddd;
+    color: #fff;
+}
+
+.sub_smile:hover{
+    box-shadow: 0px 0px 10px #9917FF;
+    transition: 0.2s;
+}
+
+@media(min-width: 320px) and (max-width: 480px){
+    
+    #boxes #dialog{
+        width: 100%;
+        background-color: #ffffff;
+        height: 80vh;
+        border-radius: 25px 25px 0 0;
+    }  
+        
+    .box_block{
+        width: 80px;
+        height: 60px;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        margin: 2px;
+    }
+
+    
+
+}
+
+/* Стилизация Scrollbar */
+
+/* ::-webkit-scrollbar { display: none; width: 3px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #555; display: none;}
+::-webkit-scrollbar-track {  background-color: #999; display: none;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff; display: none;}
+::-webkit-scrollbar-thumb { height: 50px; display: none; background: linear-gradient(85deg,#9917FF, #D24EE8); border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999; display: none;}
+::-webkit-resizer { background-color: #666; display: none;} */
